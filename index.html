@@ -21,15 +21,37 @@
             </ul>
         </nav>
     </header>
-    <section id="hero">
+    
+    <section id="hero" style="background: url('superyacht.jpg') no-repeat center center/cover;">
         <h2>Luxury Travel, Now Accepting Crypto</h2>
         <p>Exclusive private jets, superyachts, and high-end villas – book seamlessly with cryptocurrency.</p>
         <a href="contact.html" class="cta-button">Get Started</a>
     </section>
+    
+    <section id="services">
+        <div class="service-box" style="background: url('private-jet.jpg') no-repeat center center/cover;">
+            <h3>Charter Flights</h3>
+            <p>Experience luxury in the skies with private jet charters.</p>
+            <a href="flights.html" class="cta-button">Explore</a>
+        </div>
+        <div class="service-box" style="background: url('yacht.jpg') no-repeat center center/cover;">
+            <h3>Luxury Yachts</h3>
+            <p>Set sail on the world's most exclusive yachts.</p>
+            <a href="yachts.html" class="cta-button">Explore</a>
+        </div>
+        <div class="service-box" style="background: url('luxury-villa.jpg') no-repeat center center/cover;">
+            <h3>Luxury Villas</h3>
+            <p>Stay in stunning villas with breathtaking views.</p>
+            <a href="villas.html" class="cta-button">Explore</a>
+        </div>
+    </section>
+    
     <footer>
         <p>&copy; 2025 Luxury Crypto Charters. All Rights Reserved.</p>
     </footer>
+    
     <a href="https://wa.me/yourwhatsappphonenumber" class="whatsapp-button">WhatsApp Us</a>
+    
     <script>
         gsap.from("#hero h2", {opacity: 0, y: -50, duration: 1});
         gsap.from("#hero p", {opacity: 0, y: 50, duration: 1, delay: 0.5});
