@@ -63,7 +63,7 @@
         gsap.from(".cta-button", {opacity: 0, scale: 0.8, duration: 1, delay: 1});
         gsap.from(".luxury-contact", {opacity: 0, y: 50, duration: 1, delay: 1.5, ease: "power2.out"});
 
-        // Updated Animation Sequence - Plays Once & Disappears
+        // Corrected Animation Sequence - Plays Once & Disappears
         let images = ["images/private-jet.jpg", "images/yacht.jpg", "images/luxury-villa.jpg", ""];
         let texts = ["You need One Jet", "You need One Superyacht", "You need One Villa", "Then you need One Broker"];
         let index = 0;
@@ -74,7 +74,7 @@
                 gsap.to("#animated-text", {opacity: 1, duration: 0.5});
             }});
 
-            if (index < images.length - 1) {
+            if (index < images.length - 1 && images[index] !== "") {
                 gsap.to("#animated-image", {opacity: 0, duration: 0.5, onComplete: function() {
                     document.getElementById("animated-image").src = images[index];
                     gsap.to("#animated-image", {opacity: 1, duration: 0.5});
