@@ -5,66 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Crypto Charters</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #0a0a0a;
-            color: #fff;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-        #hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: url('luxury-bg.jpg') no-repeat center center/cover;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: #FFD700;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-        }
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: #fff;
-            padding: 15px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
     <header>
@@ -88,5 +30,10 @@
         <p>&copy; 2025 Luxury Crypto Charters. All Rights Reserved.</p>
     </footer>
     <a href="https://wa.me/yourwhatsappphonenumber" class="whatsapp-button">WhatsApp Us</a>
+    <script>
+        gsap.from("#hero h2", {opacity: 0, y: -50, duration: 1});
+        gsap.from("#hero p", {opacity: 0, y: 50, duration: 1, delay: 0.5});
+        gsap.from(".cta-button", {opacity: 0, scale: 0.8, duration: 1, delay: 1});
+    </script>
 </body>
 </html>
