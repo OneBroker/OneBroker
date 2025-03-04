@@ -22,7 +22,7 @@
         </nav>
     </header>
     
-    <section id="hero" style="background: url('images/superyacht.jpg') no-repeat center center/cover; height: 350px; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
+    <section id="hero" style="background: url('images/superyacht.jpg') no-repeat center center/cover; height: 350px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; overflow: hidden;">
         <div>
             <h2>Luxury Travel, Now Accepting Crypto</h2>
             <p>Exclusive private jets, superyachts, and high-end villas – book seamlessly with cryptocurrency.</p>
@@ -56,9 +56,12 @@
     <a href="https://wa.me/yourwhatsappphonenumber" class="whatsapp-button">WhatsApp Us</a>
     
     <script>
+        gsap.from("header h1", {opacity: 0, y: -20, duration: 1, ease: "power2.out"});
+        gsap.from("nav ul li", {opacity: 0, y: -10, duration: 0.5, ease: "power2.out", stagger: 0.2});
         gsap.from("#hero h2", {opacity: 0, y: -50, duration: 1});
         gsap.from("#hero p", {opacity: 0, y: 50, duration: 1, delay: 0.5});
         gsap.from(".cta-button", {opacity: 0, scale: 0.8, duration: 1, delay: 1});
+        gsap.from(".luxury-contact", {opacity: 0, y: 50, duration: 1, delay: 1.5, ease: "power2.out"});
     </script>
 </body>
 </html>
