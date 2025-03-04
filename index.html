@@ -156,3 +156,161 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Crypto Charters</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header {
+                text-align: center;
+                padding: 10px;
+            }
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 0;
+                list-style: none;
+            } {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 0;
+            }
+            nav ul li {
+                display: inline-block;
+                text-align: center;
+                padding: 10px 15px;
+                font-size: 1.1em;
+                font-weight: bold;
+                border-radius: 5px;
+                transition: background 0.3s ease-in-out;
+                width: auto;
+            } {
+                display: block;
+                width: 100%;
+            }
+            #hero {
+                height: 250px;
+                padding: 20px;
+            }
+            #hero-animation {
+                width: 90%;
+            }
+            #hero h2 {
+                font-size: 1.5em;
+            }
+            #animated-image {
+                max-width: 300px;
+            }
+            .luxury-contact {
+                padding: 20px;
+                max-width: 90%;
+            }
+            .form-group input, .form-group textarea {
+                font-size: 1em;
+            }
+            .whatsapp-button {
+                bottom: 15px;
+                right: 15px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>One Broker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Charter Flights</a></li>
+                <li><a href="yachts.html">Charter Yachts</a></li>
+                <li><a href="villas.html">Luxury Villas</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero" style="background: url('images/superyacht.jpg') no-repeat center center/cover; height: 350px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; overflow: hidden;">
+        <div id="hero-animation" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+            <h2 id="animated-text">You need One Jet</h2>
+            <img id="animated-image" src="images/private-jet.jpg" alt="Jet" style="width: 100%; max-width: 500px; border-radius: 10px; opacity: 0;">
+        </div>
+    </section>
+    
+    <section id="contact" class="luxury-contact">
+        <h2>Contact Us</h2>
+        <form action="send_email.php" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="luxury-button">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Luxury Crypto Charters. All Rights Reserved.</p>
+    </footer>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/yourwhatsappphonenumber" class="whatsapp-button">WhatsApp Us</a>
+    
+    <script>
+        gsap.from("header h1", {opacity: 0, y: -20, duration: 1, ease: "power2.out"});
+        gsap.from("nav ul li", {opacity: 0, y: -10, duration: 0.5, ease: "power2.out", stagger: 0.2});
+        gsap.from("#hero h2", {opacity: 0, y: -50, duration: 1});
+        gsap.from("#hero p", {opacity: 0, y: 50, duration: 1, delay: 0.5});
+        gsap.from(".cta-button", {opacity: 0, scale: 0.8, duration: 1, delay: 1});
+        gsap.from(".luxury-contact", {opacity: 0, y: 50, duration: 1, delay: 1.5, ease: "power2.out"});
+
+        // Corrected Animation Sequence - Plays Once & Disappears
+        let images = ["images/private-jet.jpg", "images/yacht.jpg", "images/luxury-villa.jpg", ""];
+        let texts = ["You need One Jet", "You need One Superyacht", "You need One Villa", "Then you need One Broker"];
+        let index = 0;
+
+        function updateAnimation() {
+            gsap.to("#animated-text", {opacity: 0, duration: 0.5, onComplete: function() {
+                document.getElementById("animated-text").innerText = texts[index];
+                gsap.to("#animated-text", {opacity: 1, duration: 0.5});
+            }});
+
+            if (index < images.length - 1 && images[index] !== "") {
+                gsap.to("#animated-image", {opacity: 0, duration: 0.5, onComplete: function() {
+                    document.getElementById("animated-image").src = images[index];
+                    gsap.to("#animated-image", {opacity: 1, duration: 0.5});
+                }});
+            } else {
+                gsap.to("#animated-image", {opacity: 0, duration: 0.5}); // Hide image for final text
+                gsap.to("#hero-animation", {opacity: 0, duration: 1, delay: 2, onComplete: function() {
+                    document.getElementById("hero-animation").style.display = "none";
+                }});
+            }
+            
+            index++;
+        }
+        
+        setTimeout(updateAnimation, 3000);
+        setTimeout(updateAnimation, 6000);
+        setTimeout(updateAnimation, 9000);
+        setTimeout(updateAnimation, 12000);
+    </script>
+</body>
+</html>
