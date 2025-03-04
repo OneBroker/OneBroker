@@ -16,11 +16,27 @@
             }
             nav ul {
                 display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 0;
+                list-style: none;
+            } {
+                display: flex;
                 flex-direction: column;
                 gap: 10px;
                 padding: 0;
             }
             nav ul li {
+                display: inline-block;
+                text-align: center;
+                padding: 10px 15px;
+                font-size: 1.1em;
+                font-weight: bold;
+                border-radius: 5px;
+                transition: background 0.3s ease-in-out;
+                width: auto;
+            } {
                 display: block;
                 width: 100%;
             }
