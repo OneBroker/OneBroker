@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Broker</title>
+    <title>Luxury Crypto Charters</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -23,10 +23,9 @@
     </header>
     
     <section id="hero" style="background: url('images/superyacht.jpg') no-repeat center center/cover; height: 350px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative; overflow: hidden;">
-        <div>
-            <h2>Luxury Travel, Now Accepting Crypto</h2>
-            <p>Exclusive private jets, superyachts, and high-end villas – book seamlessly with cryptocurrency.</p>
-            <a href="contact.html" class="cta-button">Get Started</a>
+        <div id="hero-animation" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+            <h2 id="animated-text">You need One Jet</h2>
+            <img id="animated-image" src="images/private-jet.jpg" alt="Jet" style="width: 100%; max-width: 500px; border-radius: 10px; opacity: 0;">
         </div>
     </section>
     
@@ -63,6 +62,29 @@
         gsap.from("#hero p", {opacity: 0, y: 50, duration: 1, delay: 0.5});
         gsap.from(".cta-button", {opacity: 0, scale: 0.8, duration: 1, delay: 1});
         gsap.from(".luxury-contact", {opacity: 0, y: 50, duration: 1, delay: 1.5, ease: "power2.out"});
+
+        // Animation Sequence for Hero Section
+        let images = ["images/private-jet.jpg", "images/yacht.jpg", "images/luxury-villa.jpg"];
+        let texts = ["You need One Jet", "You need One Superyacht", "You need One Villa", "Then you need One Broker"];
+        let index = 0;
+
+        function updateAnimation() {
+            gsap.to("#animated-text", {opacity: 0, duration: 0.5, onComplete: function() {
+                document.getElementById("animated-text").innerText = texts[index];
+                gsap.to("#animated-text", {opacity: 1, duration: 0.5});
+            }});
+
+            if (index < images.length) {
+                gsap.to("#animated-image", {opacity: 0, duration: 0.5, onComplete: function() {
+                    document.getElementById("animated-image").src = images[index];
+                    gsap.to("#animated-image", {opacity: 1, duration: 0.5});
+                }});
+            }
+            
+            index = (index + 1) % texts.length;
+        }
+        
+        setInterval(updateAnimation, 3000);
     </script>
 </body>
 </html>
