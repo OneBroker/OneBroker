@@ -63,8 +63,8 @@
         gsap.from(".cta-button", {opacity: 0, scale: 0.8, duration: 1, delay: 1});
         gsap.from(".luxury-contact", {opacity: 0, y: 50, duration: 1, delay: 1.5, ease: "power2.out"});
 
-        // Animation Sequence for Hero Section
-        let images = ["images/private-jet.jpg", "images/yacht.jpg", "images/luxury-villa.jpg"];
+        // Animation Sequence for Hero Section - Plays Once & Disappears
+        let images = ["images/private-jet.jpg", "images/yacht.jpg", "images/luxury-villa.jpg", ""];
         let texts = ["You need One Jet", "You need One Superyacht", "You need One Villa", "Then you need One Broker"];
         let index = 0;
 
@@ -74,17 +74,24 @@
                 gsap.to("#animated-text", {opacity: 1, duration: 0.5});
             }});
 
-            if (index < images.length) {
+            if (index < images.length - 1) {
                 gsap.to("#animated-image", {opacity: 0, duration: 0.5, onComplete: function() {
                     document.getElementById("animated-image").src = images[index];
                     gsap.to("#animated-image", {opacity: 1, duration: 0.5});
                 }});
+            } else {
+                gsap.to("#hero-animation", {opacity: 0, duration: 1, delay: 2, onComplete: function() {
+                    document.getElementById("hero-animation").style.display = "none";
+                }});
             }
             
-            index = (index + 1) % texts.length;
+            index++;
         }
         
-        setInterval(updateAnimation, 3000);
+        setTimeout(updateAnimation, 3000);
+        setTimeout(updateAnimation, 6000);
+        setTimeout(updateAnimation, 9000);
+        setTimeout(updateAnimation, 12000);
     </script>
 </body>
 </html>
