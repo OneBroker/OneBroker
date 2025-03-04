@@ -107,3 +107,84 @@ footer {
 .luxury-button:hover {
     background: #ffcc00;
 }
+.luxury-contact {
+    background: #111;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+.luxury-contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: gold;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid gold;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ffcc00;
+}
+
+.luxury-button {
+    background: gold;
+    color: black;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.luxury-button:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.luxury-contact {
+    animation: fadeIn 1s ease-in-out;
+}
