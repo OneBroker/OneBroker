@@ -1,47 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
     background-color: #0a0a0a;
     color: #fff;
+    overflow-x: hidden;
 }
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.1);
 }
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
+
 nav a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
 }
+
+nav a:hover {
+    color: gold;
+}
+
 #hero {
     text-align: center;
-    padding: 100px 20px;
-    background: url('luxury-bg.jpg') no-repeat center center/cover;
+    padding: 150px 20px;
+    background: url('images/luxury-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
 }
+
 .cta-button {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 30px;
-    background: #FFD700;
-    color: #000;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, gold, #ffcc00);
+    color: black;
     text-decoration: none;
+    font-size: 1.2em;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.3);
 }
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #ffcc00, gold);
+    transform: scale(1.05);
+}
+
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px -4px 10px rgba(255, 215, 0, 0.1);
 }
+
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -55,96 +86,53 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s;
 }
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
 .luxury-contact {
     background: #111;
     color: white;
-    padding: 50px;
+    padding: 60px;
     text-align: center;
-    max-width: 600px;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.3);
-}
-
-.luxury-contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #777;
-    border-radius: 5px;
-    background: #222;
-    color: white;
-}
-
-.luxury-button {
-    background: gold;
-    color: black;
-    padding: 15px 25px;
-    font-size: 1.2em;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-}
-
-.luxury-button:hover {
-    background: #ffcc00;
-}
-.luxury-contact {
-    background: #111;
-    color: white;
-    padding: 50px;
-    text-align: center;
-    max-width: 600px;
-    margin: 50px auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.3);
+    max-width: 700px;
+    margin: 80px auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(255, 215, 0, 0.3);
     font-family: 'Poppins', sans-serif;
 }
 
 .luxury-contact h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
     color: gold;
     font-weight: bold;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: left;
 }
 
 .form-group label {
     display: block;
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-bottom: 5px;
     color: #ddd;
+    font-weight: bold;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px;
-    font-size: 1em;
+    padding: 15px;
+    font-size: 1.1em;
     border: 2px solid gold;
-    border-radius: 8px;
+    border-radius: 10px;
     background: #222;
     color: white;
     outline: none;
@@ -154,26 +142,27 @@ footer {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: #ffcc00;
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
 }
 
 .luxury-button {
-    background: gold;
+    background: linear-gradient(135deg, gold, #ffcc00);
     color: black;
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 18px 40px;
+    font-size: 1.3em;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.3);
 }
 
 .luxury-button:hover {
-    background: #ffcc00;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #ffcc00, gold);
+    transform: scale(1.1);
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
