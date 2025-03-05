@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 .hero-text {
-    font-size: 3.5em; /* Slightly reduced size to fit within the image */
+    font-size: 3em; /* Smaller to better fit within the image */
     font-weight: bold;
     text-align: center;
     color: gold;
@@ -58,13 +58,14 @@ nav a:hover {
     max-width: 85%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     line-height: 1.2;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 .inner-page-hero-text {
     font-size: 3em; /* Adjusted for inner pages */
