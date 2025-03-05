@@ -49,17 +49,21 @@ nav a:hover {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-#hero {
+.hero-text {
+    font-size: 3.5em; /* Slightly reduced size to fit within the image */
+    font-weight: bold;
     text-align: center;
-    padding: 150px 20px;
-    background: url('images/luxury-bg.jpg') no-repeat center center/cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
+    color: gold;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 1.2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .inner-page-hero-text {
