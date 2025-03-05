@@ -61,7 +61,7 @@ nav a:hover {
     gap: 2px;
     line-height: 1.2;
     position: absolute;
-    top: 50%;
+    top: 42%; /* Adjusted to move text up */
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -180,6 +180,7 @@ footer {
     .hero-text {
         font-size: 1.8em;
         gap: 1px;
+        top: 40%; /* Adjusted for mobile */
     }
     .inner-page-hero-text {
         font-size: 2.5em;
