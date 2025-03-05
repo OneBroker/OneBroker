@@ -69,7 +69,7 @@ nav a:hover {
 .hero-text strong {
     font-weight: 900;
     font-size: 1.2em;
-    color: white; /* Changed back to white */
+    color: white;
 }
 
 .inner-page-hero-text {
@@ -83,6 +83,10 @@ nav a:hover {
     flex-direction: column;
     gap: 5px;
     line-height: 1.2;
+    position: absolute;
+    top: 30%; /* Moved higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .cta-button {
@@ -191,6 +195,7 @@ footer {
     .inner-page-hero-text {
         font-size: 2.5em;
         gap: 4px;
+        top: 28%; /* Adjusted for mobile */
     }
     header {
         flex-direction: column;
