@@ -61,7 +61,7 @@ nav a:hover {
     gap: 2px;
     line-height: 1.2;
     position: absolute;
-    top: 42%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -73,7 +73,7 @@ nav a:hover {
 }
 
 .inner-page-hero-text {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
     text-align: center;
     color: gold;
@@ -81,10 +81,10 @@ nav a:hover {
     max-width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     line-height: 1.2;
     position: absolute;
-    top: 35%; /* Moved down */
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -162,15 +162,16 @@ nav a:hover {
 /* Mobile Optimization */
 @media (max-width: 768px) {
     .hero-text {
-        font-size: 1.5em;
+        font-size: 1.3em;
         gap: 1px;
         top: 38%;
     }
     
     .inner-page-hero-text {
-        font-size: 1.5em !important; /* Force smaller text */
-        top: 40% !important; /* Move down further */
-        max-width: 80%; /* Prevents overflow */
+        font-size: 1.2em !important; /* Force smaller text */
+        top: 42% !important; /* Move down slightly */
+        max-width: 75%; /* Prevents overlap */
+        line-height: 1.2;
     }
     
     header {
