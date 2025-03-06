@@ -390,20 +390,25 @@ nav a:hover {
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
+    /* Homepage Text Fix */
     .hero-text {
-        font-size: 1.2em; /* Keep readable size */
-        top: 48%; /* Moves text slightly lower to fix cutoff */
-        gap: 3px;
+        font-size: 0.9em !important; /* Shrinks homepage text */
+        top: 55% !important; /* Moves text slightly lower */
+        gap: 2px;
         max-width: 90%;
+        line-height: 1.3;
+        padding: 5px 10px;
     }
-    
+
+    /* Inner Pages Text Fix */
     .inner-page-hero-text {
-        font-size: 1.2em !important;
-        top: 45% !important;
+        font-size: 0.85em !important; /* Shrinks text more */
+        top: 50% !important; /* Moves slightly lower */
         max-width: 85%;
         line-height: 1.2;
+        padding: 5px 10px;
     }
-    
+
     header {
         flex-direction: column;
         text-align: center;
@@ -425,13 +430,13 @@ nav a:hover {
     }
     
     #hero {
-        height: 220px;
-        padding: 15px;
+        height: 200px; /* Slightly smaller */
+        padding: 10px;
     }
     
     section {
-        padding: 25px 10px;
-        font-size: 1em;
-        line-height: 1.5em;
+        padding: 20px 10px;
+        font-size: 0.9em;
+        line-height: 1.4em;
     }
 }
