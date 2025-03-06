@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 .hero-text {
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
     color: gold;
@@ -61,7 +61,7 @@ nav a:hover {
     gap: 2px;
     line-height: 1.2;
     position: absolute;
-    top: 38%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -129,20 +129,20 @@ footer {
 }
 
 .luxury-contact h2 {
-    font-size: 2.2em;
+    font-size: 2em;
     margin-bottom: 20px;
     color: gold;
     font-weight: bold;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
 .form-group label {
     display: block;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 5px;
     color: #ddd;
     font-weight: bold;
@@ -151,10 +151,10 @@ footer {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px;
-    font-size: 1em;
+    padding: 10px;
+    font-size: 0.9em;
     border: 2px solid gold;
-    border-radius: 10px;
+    border-radius: 8px;
     background: #222;
     color: white;
     outline: none;
@@ -170,8 +170,8 @@ footer {
 .luxury-button {
     background: linear-gradient(135deg, gold, #ffcc00);
     color: black;
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 12px 24px;
+    font-size: 1em;
     border: none;
     cursor: pointer;
     border-radius: 8px;
@@ -188,14 +188,14 @@ footer {
 /* Mobile Optimization */
 @media (max-width: 768px) {
     .hero-text {
-        font-size: 1.5em;
+        font-size: 1.2em;
         gap: 1px;
-        top: 30%;
+        top: 35%;
     }
     .inner-page-hero-text {
-        font-size: 1.6em;
+        font-size: 1.4em;
         gap: 4px;
-        top: 35%;
+        top: 38%;
     }
     header {
         flex-direction: column;
@@ -218,13 +218,13 @@ footer {
     }
     
     #hero {
-        height: 220px;
-        padding: 15px;
+        height: 200px;
+        padding: 10px;
     }
     
     section {
-        padding: 25px 10px;
-        font-size: 1em;
+        padding: 20px 10px;
+        font-size: 0.9em;
         line-height: 1.5em;
     }
 }
