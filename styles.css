@@ -50,12 +50,12 @@ nav a:hover {
 }
 
 .hero-text {
-    font-family: 'Didot', serif; /* Change font for a premium look */
-    font-size: 2.2em; /* Adjust size */
+    font-family: 'Didot', serif; /* Keep luxury font */
+    font-size: 2.2em;
     font-weight: bold;
     text-align: center;
     color: white;
-    text-shadow: 2px 2px 15px rgba(255, 215, 0, 0.5); /* Subtle golden glow */
+    text-shadow: 2px 2px 15px rgba(255, 215, 0, 0.6); /* More contrast */
     max-width: 85%;
     display: flex;
     flex-direction: column;
@@ -65,18 +65,22 @@ nav a:hover {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.4); /* Soft dark background to improve contrast */
+    border-radius: 10px;
 }
 
-/* Make "One Broker" stand out */
+/* Make "One Broker" more luxurious */
 .hero-text strong {
     font-weight: 900;
     font-size: 1.4em;
-    background: linear-gradient(135deg, gold, #ffcc00);
+    background: linear-gradient(135deg, #FFD700, #FFC107); /* Stronger gold gradient */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Luxury gradient effect */
-    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8); /* Subtle glow for visibility */
     letter-spacing: 1px;
 }
+
 
 
 .inner-page-hero-text {
