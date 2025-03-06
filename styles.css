@@ -444,3 +444,7 @@ nav a:hover {
 .contact-page .inner-page-hero-text {
     background: none !important;
 }
+/* Smooth Scrolling Effect */
+html {
+    scroll-behavior: smooth;
+}
