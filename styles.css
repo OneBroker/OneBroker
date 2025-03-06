@@ -440,3 +440,7 @@ nav a:hover {
         line-height: 1.4em;
     }
 }
+/* Remove background box ONLY for Contact Page */
+.contact-page .inner-page-hero-text {
+    background: none !important;
+}
