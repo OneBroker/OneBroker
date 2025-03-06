@@ -50,23 +50,23 @@ nav a:hover {
 }
 
 .hero-text {
-    font-family: 'Didot', serif; /* Keep luxury font */
+    font-family: 'Didot', serif;
     font-size: 2.2em;
     font-weight: bold;
     text-align: center;
     color: white;
-    text-shadow: 2px 2px 15px rgba(255, 215, 0, 0.6); /* More contrast */
+    text-shadow: 2px 2px 15px rgba(255, 215, 0, 0.6);
     max-width: 85%;
     display: flex;
     flex-direction: column;
     gap: 4px;
     line-height: 1.3;
     position: absolute;
-    top: 45%;
+    top: 50%; /* Fix for mobile visibility */
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.4); /* Soft dark background to improve contrast */
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
 }
 
@@ -74,18 +74,17 @@ nav a:hover {
 .hero-text strong {
     font-weight: 900;
     font-size: 1.4em;
-    background: linear-gradient(135deg, #FFD700, #FFC107); /* Stronger gold gradient */
+    background: linear-gradient(135deg, #FFD700, #FFC107);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8); /* Subtle glow for visibility */
+    text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8);
     letter-spacing: 1px;
 }
 
-
-
+/* Inner Page Hero Text */
 .inner-page-hero-text {
-    font-family: 'Didot', serif; /* Keep luxury font */
-    font-size: 2em; /* Adjust for inner pages */
+    font-family: 'Didot', serif;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
     color: white;
@@ -96,11 +95,11 @@ nav a:hover {
     gap: 4px;
     line-height: 1.3;
     position: absolute;
-    top: 42%; /* Adjusted position */
+    top: 45%; /* Ensures text stays visible */
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.5); /* Darker background to ensure contrast */
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
@@ -123,7 +122,6 @@ nav a:hover {
     background: linear-gradient(135deg, #ffcc00, gold);
     transform: scale(1.05);
 }
-
 
 /* Contact Form Styling */
 .luxury-contact {
@@ -198,20 +196,16 @@ nav a:hover {
 /* Mobile Optimization */
 @media (max-width: 768px) {
     .hero-text {
-        font-size: 1.3em; /* Ensures text size is not too large */
-        gap: 2px; /* Keeps lines close but readable */
-        top: 50%; /* Moves text slightly down to be fully visible */
-        transform: translate(-50%, -50%); /* Keeps it centered */
-        max-width: 90%; /* Ensures text doesn't go out of bounds */
-        padding: 8px 15px; /* Reduces background padding to fit more text */
+        font-size: 1.2em; /* Keep readable size */
+        top: 48%; /* Moves text slightly lower to fix cutoff */
+        gap: 3px;
+        max-width: 90%;
     }
-}
-
     
     .inner-page-hero-text {
-        font-size: 1.2em !important; /* Force smaller text */
-        top: 42% !important; /* Move down slightly */
-        max-width: 75%; /* Prevents overlap */
+        font-size: 1.2em !important;
+        top: 45% !important;
+        max-width: 85%;
         line-height: 1.2;
     }
     
