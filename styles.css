@@ -198,10 +198,15 @@ nav a:hover {
 /* Mobile Optimization */
 @media (max-width: 768px) {
     .hero-text {
-        font-size: 1.3em;
-        gap: 1px;
-        top: 48%; /* Move down slightly on mobile */
+        font-size: 1.3em; /* Ensures text size is not too large */
+        gap: 2px; /* Keeps lines close but readable */
+        top: 50%; /* Moves text slightly down to be fully visible */
+        transform: translate(-50%, -50%); /* Keeps it centered */
+        max-width: 90%; /* Ensures text doesn't go out of bounds */
+        padding: 8px 15px; /* Reduces background padding to fit more text */
     }
+}
+
     
     .inner-page-hero-text {
         font-size: 1.2em !important; /* Force smaller text */
